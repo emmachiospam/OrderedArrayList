@@ -6,5 +6,5 @@ A confusion that we cleared up is while we thought we were supposed to go throug
 
 
 OrderedArrayList:
-We discussed that we would use a for loop and compareTo to determine the index the added object should be added to so that it is added to the right place to make sure that the ArrayList stays in order. 
+We discussed that we would use a for loop and compareTo to determine the index the added object should be added to so that it is added to the right place to make sure that the ArrayList stays in order. We decided that we would use the add method that takes in both the added object and the index so that we are able to add the object into the desired index.
 A misconception that we had was that some of us thought that we would be intaking an ArrayList, organizing that and then added, but we cleared it up by realizing that we are to start with a brand new ArrayList that is adding it in a way so that it is always in order.
