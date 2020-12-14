@@ -42,7 +42,14 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
   }
 
-  public int rightIndex(T element) {
+  public T set(int index, T value) {
+    T previous = get(index);
+    remove(index);
+    add(value);
+    return previous;
+  }
+
+  private int rightIndex(T element) {
     int returnValue = 0;
     if(currentIndex > 0){
       T testfirst = get(0);
