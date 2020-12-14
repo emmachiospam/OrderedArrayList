@@ -18,16 +18,28 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public boolean add(T value) {
-    int index = rightIndex(value);
+    int newIndex = rightIndex(value);
     if(currentIndex == 0) {
       super.add(value);
       currentIndex++;
     }
     else{
-      super.add(index, value);
+      super.add(newIndex, value);
       currentIndex++;
     }
     return true;
+  }
+
+  public void add(int index, T value) {
+    int newIndex = rightIndex(value);
+    if(currentIndex == 0) {
+      super.add(value);
+      currentIndex++;
+    }
+    else{
+      super.add(newIndex, value);
+      currentIndex++;
+    }
   }
 
   public int rightIndex(T element) {
