@@ -12,6 +12,11 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     currentIndex = 0;
   }
 
+  public OrderedArrayList(int startingCapacity) {
+    data = new NoNullArrayList<T>(startingCapacity);
+    currentIndex = 0;
+  }
+
   public boolean add(T value) {
     int index = rightIndex(value);
     if(currentIndex == 0) {
