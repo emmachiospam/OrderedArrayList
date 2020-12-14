@@ -7,6 +7,10 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     data = new ArrayList<T>();
   }
 
+  public NoNullArrayList(int startingCapacity) {
+    data = new ArrayList<T>(startingCapacity);
+  }
+
   public boolean add(T value) {
     if(value == null) {
       throw new IllegalArgumentException("cannot add a null value");
