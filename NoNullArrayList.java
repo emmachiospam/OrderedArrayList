@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.lang.IllegalArgumentException;
 public class NoNullArrayList<T> extends ArrayList<T>{
   private ArrayList<T> data;
-  private int index;
 
   public NoNullArrayList() {
     data = new ArrayList<T>();
@@ -15,6 +14,15 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     else{
       super.add(value);
       return true;
+    }
+  }
+
+  public void add(int index, T value) {
+    if(value == null) {
+      throw new IllegalArgumentException("cannot add a null value");
+    }
+    else{
+      super.add(index, value);
     }
   }
 
