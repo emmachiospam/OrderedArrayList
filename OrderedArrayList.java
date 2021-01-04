@@ -19,6 +19,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 
   public boolean add(T value) {
     int newIndex = rightIndex(value);
+    if(value == null) {
+      throw new IllegalArgumentException("you can not add null as a value");
+    }
     if(currentIndex == 0) {
       super.add(value);
       currentIndex++;
@@ -32,6 +35,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 
   public void add(int index, T value) {
     int newIndex = rightIndex(value);
+    if(value == null) {
+      throw new IllegalArgumentException("you can not add null as a value");
+    }
     if(currentIndex == 0) {
       super.add(value);
       currentIndex++;
@@ -43,6 +49,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public T set(int index, T value) {
+    if(value == null) {
+      throw new IllegalArgumentException("you can not set null as a value");
+    }
     T previous = get(index);
     remove(index);
     add(value);
